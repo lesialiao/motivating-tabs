@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+
+  "name": "Motivational Women on Tab",
+  "description": "Displays photos of women of past and current along with quotes and history when new tab is opened",
+  "version": "1.0",
+
+  "chrome_url_overrides" : {
+    "newtab": "myPage.html"
+  }
+
+}
