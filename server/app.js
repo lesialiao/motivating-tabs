@@ -12,7 +12,7 @@ function randomQuote() {
   var i = Math.floor(Math.random() * quotes.length);
   var line = quotes[i];
 
-  var index = line.lastIndexOf('—');
+  var index = line.lastIndexOf('-');
   var quote = line.slice(0, index);
   var author = line.slice(index + 1, line.length);
 
