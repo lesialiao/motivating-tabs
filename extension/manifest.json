@@ -7,6 +7,11 @@
 
   "chrome_url_overrides" : {
     "newtab": "myPage.html"
-  }
+  },
 
+  "content_security_policy":"script-src 'self' https://code.jquery.com/jquery-3.2.1.min.js; object-src 'self'",
+
+  "permissions": [
+    "http://motivating-tabs.herokuapp.com/"
+  ]
 }

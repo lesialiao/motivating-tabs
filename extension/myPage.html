@@ -22,23 +22,16 @@
       }
     </style>
 
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-    <script src="popup.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   </head>
 
 
   <body>
     <div id="status"></div>
     <img id="image-result" hidden>
-    <h1>Name</h1>
-    <h2>Quote</h2>
-    <h3>Bio</h3>
+    <h1 id="quote"></h1>
+    <h2 id="author"></h2>
 
+    <script src="script.js"></script>
   </body>
 </html>
-
