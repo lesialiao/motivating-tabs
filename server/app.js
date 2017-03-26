@@ -4,10 +4,11 @@ var fs = require('fs');
 
 var port = process.env.PORT || '3000';
 
-// read quotes
+// read quotes file
 var file = fs.readFileSync('server/quotes.txt', 'UTF-8');
 var quotes = file.split('\n').slice(0, -1);
 
+// function returns json of a random quote
 function randomQuote() {
   var i = Math.floor(Math.random() * quotes.length);
   var line = quotes[i];
@@ -19,7 +20,7 @@ function randomQuote() {
   return {quote: quote.trim(), author: author.trim()};
 }
 
-// Configure our HTTP server to respond with Hello World to all requests.
+// server middleware
 var server = http.createServer(function (req, res) {
   res.end(JSON.stringify(randomQuote()));
 });
@@ -27,4 +28,4 @@ var server = http.createServer(function (req, res) {
 server.listen(port);
 
 // Put a friendly message on the terminal
-console.log('Server running');
+console.log(`Server running on port ${port}`);
