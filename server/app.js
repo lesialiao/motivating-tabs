@@ -16,8 +16,6 @@ function randomQuote() {
   var quote = line.slice(0, index);
   var author = line.slice(index + 1, line.length);
 
-  debugger
-
   return {quote: quote.trim(), author: author.trim()};
 }
 
